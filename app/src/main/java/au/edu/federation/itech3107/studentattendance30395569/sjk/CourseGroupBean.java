@@ -3,7 +3,7 @@ package au.edu.federation.itech3107.studentattendance30395569.sjk;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-//课程组表
+//Course group table
 @Entity
 public class CourseGroupBean {
 

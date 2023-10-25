@@ -17,31 +17,7 @@ import au.edu.federation.itech3107.studentattendance30395569.R;
 import au.edu.federation.itech3107.studentattendance30395569.sjk.ClassBean;
 import au.edu.federation.itech3107.studentattendance30395569.util.StringUtil;
 
-/**
- * ━━━━━━神兽出没━━━━━━
- * 　　　┏┓　　　┏┓
- * 　　┏┛┻━━━┛┻┓
- * 　　┃　　　　　　　┃
- * 　　┃　　　━　　　┃
- * 　　┃　┳┛　┗┳　┃
- * 　　┃　　　　　　　┃
- * 　　┃　　　┻　　　┃
- * 　　┃　　　　　　　┃
- * 　　┗━┓　　　┏━┛
- * 　　　　┃　　　┃  神兽保佑
- * 　　　　┃　　　┃  代码无bug
- * 　　　　┃　　　┗━━━┓
- * 　　　　┃　　　　　　　┣┓
- * 　　　　┃　　　　　　　┏┛
- * 　　　　┗┓┓┏━┳┓┏┛
- * 　　　　　┃┫┫　┃┫┫
- * 　　　　　┗┻┛　┗┻┛
- * ━━━━━━感觉萌萌哒━━━━━━
- *
- * @author
- * @date 2023/10/19
- * @description
- */
+
 
 public class ClassCheckAdapter extends BaseQuickAdapter<ClassBean, BaseViewHolder> {
 
@@ -59,7 +35,7 @@ public class ClassCheckAdapter extends BaseQuickAdapter<ClassBean, BaseViewHolde
                 if (b) {
                     if (!bc.select_class.contains(item.getId()+",")) {
                         bc.select_class = bc.select_class + item.getId() + ",";
-                        Log.e("hao", "选中: "+ bc.select_class);
+                        Log.e("hao", "Pitch on: "+ bc.select_class);
                     }
                 }else {
                     if (bc.select_class.contains(item.getId()+",")) {
@@ -74,7 +50,7 @@ public class ClassCheckAdapter extends BaseQuickAdapter<ClassBean, BaseViewHolde
                             }
                         }
                         bc.select_class = newDes;
-                        Log.e("hao", "不选中: "+ bc.select_class);
+                        Log.e("hao", "No pitch on: "+ bc.select_class);
                     }
                 }
             }

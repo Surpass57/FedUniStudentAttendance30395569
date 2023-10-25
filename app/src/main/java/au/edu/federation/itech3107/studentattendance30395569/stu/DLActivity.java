@@ -32,7 +32,7 @@ public class DLActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        //登录
+        //login
         inflate.btnLogin.setOnClickListener(v -> {
             UserDataBase.getInstance(this).getUserDao().getUserByName(inflate.etAccount.getText().toString())
                     .subscribeOn(Schedulers.io())
@@ -45,20 +45,20 @@ public class DLActivity extends AppCompatActivity {
 
                         @Override
                         public void onSuccess(List<UserBean> list) {
-                            //查询到结果
+                            //Query result
                             if (list.size() != 0) {
-                                //校验账号
+                                //Check account
                                 UserBean userBean = list.get(0);
                                 if (userBean.getPwd().equals(inflate.etPassword.getText().toString())) {
                                     startActivity(new Intent(DLActivity.this, SYActivity.class));
                                     finish();
                                 }else {
-                                    //密码错误
+                                    //password worry
                                     Toast.makeText(DLActivity.this, getString(R.string.passwordNotice), Toast.LENGTH_SHORT).show();
                                 }
 
                             } else {
-                                //没有此账号
+                                //Account does not exist
                                 Toast.makeText(DLActivity.this, getString(R.string.passwordNotice), Toast.LENGTH_SHORT).show();
                             }
 
@@ -70,13 +70,13 @@ public class DLActivity extends AppCompatActivity {
 
                         @Override
                         public void onComplete() {
-                            //查询不到结果
+                            //No result found
                             Toast.makeText(DLActivity.this, getString(R.string.passwordNotice), Toast.LENGTH_SHORT).show();
                         }
                     });
         });
 
-        //注册
+        //register
         inflate.btnRegister.setOnClickListener(v -> {
             startActivity(new Intent(this, ZCActivity.class));
         });

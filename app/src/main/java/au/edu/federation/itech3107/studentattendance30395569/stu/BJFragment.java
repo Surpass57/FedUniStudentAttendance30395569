@@ -30,7 +30,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * 学生管理
+ * student management
  */
 public class BJFragment extends AppCompatDialogFragment {
 
@@ -90,7 +90,7 @@ public class BJFragment extends AppCompatDialogFragment {
 
                  @Override
                  public void onSuccess(List<ClassBean> list) {
-                    //查询到结果
+                     // Query the result
                     if (list.size() != 0) {
                        mAdapter.setNewData(list);
                     }

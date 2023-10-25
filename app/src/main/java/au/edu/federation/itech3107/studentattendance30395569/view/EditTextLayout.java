@@ -16,9 +16,6 @@ import androidx.annotation.Nullable;
 import au.edu.federation.itech3107.studentattendance30395569.R;
 
 
-/**
- * Created by mnnyang on 17-11-5.
- */
 
 public class EditTextLayout extends LinearLayout {
 

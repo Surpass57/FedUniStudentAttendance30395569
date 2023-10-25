@@ -24,31 +24,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-/**
- * ━━━━━━神兽出没━━━━━━
- * 　　　┏┓　　　┏┓
- * 　　┏┛┻━━━┛┻┓
- * 　　┃　　　　　　　┃
- * 　　┃　　　━　　　┃
- * 　　┃　┳┛　┗┳　┃
- * 　　┃　　　　　　　┃
- * 　　┃　　　┻　　　┃
- * 　　┃　　　　　　　┃
- * 　　┗━┓　　　┏━┛
- * 　　　　┃　　　┃  神兽保佑
- * 　　　　┃　　　┃  代码无bug
- * 　　　　┃　　　┗━━━┓
- * 　　　　┃　　　　　　　┣┓
- * 　　　　┃　　　　　　　┏┛
- * 　　　　┗┓┓┏━┳┓┏┛
- * 　　　　　┃┫┫　┃┫┫
- * 　　　　　┗┻┛　┗┻┛
- * ━━━━━━感觉萌萌哒━━━━━━
- *
- * @author
- * @date 2023/10/19
- * @description
- */
+
 
 public class CheckAdapter extends BaseQuickAdapter<ClassBean, BaseViewHolder> {
 
@@ -78,11 +54,11 @@ public class CheckAdapter extends BaseQuickAdapter<ClassBean, BaseViewHolder> {
 
                     @Override
                     public void onSuccess(List<StudentBean> list) {
-                        //查询到结果
+                        // Query the result
                         if (list.size() != 0) {
                             mAdapter.setNewData(list);
                             for (StudentBean bean : list) {
-                                Log.e("hao", "学生数据:" + bean.toString());
+                                Log.e("hao", "Student's Data:" + bean.toString());
                             }
                         }
 

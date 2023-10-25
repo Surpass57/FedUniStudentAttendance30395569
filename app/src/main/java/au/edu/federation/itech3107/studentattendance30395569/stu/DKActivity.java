@@ -24,31 +24,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-/**
- * ━━━━━━神兽出没━━━━━━
- * 　　　┏┓　　　┏┓
- * 　　┏┛┻━━━┛┻┓
- * 　　┃　　　　　　　┃
- * 　　┃　　　━　　　┃
- * 　　┃　┳┛　┗┳　┃
- * 　　┃　　　　　　　┃
- * 　　┃　　　┻　　　┃
- * 　　┃　　　　　　　┃
- * 　　┗━┓　　　┏━┛
- * 　　　　┃　　　┃  神兽保佑
- * 　　　　┃　　　┃  代码无bug
- * 　　　　┃　　　┗━━━┓
- * 　　　　┃　　　　　　　┣┓
- * 　　　　┃　　　　　　　┏┛
- * 　　　　┗┓┓┏━┳┓┏┛
- * 　　　　　┃┫┫　┃┫┫
- * 　　　　　┗┻┛　┗┻┛
- * ━━━━━━感觉萌萌哒━━━━━━
- *
- * @author
- * @date 2023/10/20
- * @description
- */
 
 public class DKActivity extends AppCompatActivity {
     private ActivityCheckBinding root;
@@ -82,7 +57,7 @@ public class DKActivity extends AppCompatActivity {
 
                         @Override
                         public void onSuccess(CourseV2 list) {
-                            //查询到结果
+                            //Query result
                             if (!StringUtil.isEmpty(list.getJoinClassId())) {
                                 bc.select_class = list.getJoinClassId();
                             }
@@ -125,7 +100,7 @@ public class DKActivity extends AppCompatActivity {
 
                     @Override
                     public void onSuccess(List<ClassBean> list) {
-                        //查询到结果
+                        //Query result
                         if (list.size() != 0) {
                             for (int i = 0; i < list.size(); i++) {
                                 if (bc.select_class.contains(list.get(i).getId() + ",")) {

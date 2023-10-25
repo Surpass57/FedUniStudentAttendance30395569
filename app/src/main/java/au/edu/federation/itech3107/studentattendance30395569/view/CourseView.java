@@ -42,7 +42,7 @@ public class CourseView extends FrameLayout {
     private int mCurrentIndex = 1;
     private String mNotCurrentPrefix = "";
 
-    /** 行item的宽度根据view的总宽度自动平均分配 */
+    /** The width of the row item is automatically evenly distributed according to the total width of the view */
     private boolean mRowItemWidthAuto = true;
 
     List<CourseAncestor> mCourseList = new ArrayList<>();
@@ -56,13 +56,13 @@ public class CourseView extends FrameLayout {
     private Paint mLinePaint;
     private Path mLinePath = new Path();
 
-    /** 显示垂直分割线 */
+    /** Displays vertical dividers */
     private boolean mShowVerticalLine = false;
 
-    /** 显示水平分割线 */
+    /** Displays horizontal dividers */
     private boolean mShowHorizontalLine = true;
 
-    /** 第一次绘制 */
+    /** First draw */
     private boolean mFirstDraw;
 
     /** text */
@@ -73,7 +73,7 @@ public class CourseView extends FrameLayout {
     private int mTextColor = Color.WHITE;
     private int mTextSize = 12;
 
-    /** 不活跃的背景 */
+    /** Inactive background */
     private int mInactiveBackgroundColor = 0xFFE3EEF5;
     private int mInactiveTextColor = 0xFFbadac9;
 
@@ -88,7 +88,7 @@ public class CourseView extends FrameLayout {
     }
 
     private void init() {
-        l("调用init");
+        l("invoke init");
         initPaint();
     }
 
@@ -103,7 +103,7 @@ public class CourseView extends FrameLayout {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        l("调用onMeasure");
+        l("invoke onMeasure");
 
         mHeight = mColItemHeight * mColCount;
         int heightResult = MeasureSpec.makeMeasureSpec(mHeight, MeasureSpec.EXACTLY);
@@ -121,7 +121,7 @@ public class CourseView extends FrameLayout {
         }
     }
 
-    /** 把数组中的数据全部添加到界面 */
+    /** Add all the data in the array to the interface */
     private void initCourseItemView() {
         removeAllViews();
         l("调用initCourseItemView");
@@ -131,7 +131,7 @@ public class CourseView extends FrameLayout {
         }
     }
 
-    /** 在界面初始化之后添加数据 */
+    /** Add data after interface initialization */
     public void addCourse(CourseAncestor course) {
         if (course == null) {
             return;
@@ -168,7 +168,7 @@ public class CourseView extends FrameLayout {
     }
 
     private void updateItemStatus(CourseAncestor course) {
-        /*更新course的活跃状态*/
+        /*Update the active status of the course*/
         course.setActiveStatus(course.shouldShow(mCurrentIndex));
     }
 
@@ -222,7 +222,7 @@ public class CourseView extends FrameLayout {
     }
 
     private void drawLine(Canvas canvas) {
-        //横线
+        //Transverse line
         if (mShowHorizontalLine) {
             for (int i = 1; i < mColCount; i++) {
                 mLinePath.reset();
@@ -232,7 +232,7 @@ public class CourseView extends FrameLayout {
             }
         }
 
-        //竖线
+        //Vertical line
         if (mShowVerticalLine) {
             for (int i = 1; i < mRowCount; i++) {
                 mLinePath.reset();
@@ -243,7 +243,7 @@ public class CourseView extends FrameLayout {
         }
     }
 
-    /*事件*/
+    /*event*/
     @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -265,7 +265,7 @@ public class CourseView extends FrameLayout {
 
     private void addTagCourseView(int x, int y) {
 
-        /*找到点击的方框坐标*/
+        /*Find the box coordinates of the click*/
         int x1 = x / mRowItemWidth + 1;
         int y1 = y / mColItemHeight + 1;
 
@@ -287,7 +287,7 @@ public class CourseView extends FrameLayout {
     }
 
     /**
-     * 移除添加按钮
+     * Remove add button
      */
     public void removeAddTagView() {
         if (mAddTagCourseView != null) {
@@ -300,7 +300,7 @@ public class CourseView extends FrameLayout {
     }
 
     /**
-     * 建立添加按钮
+     * Create add button
      */
     private View createAddTagView() {
         final BackgroundView bgLayout = new BackgroundView(getContext());
@@ -339,7 +339,7 @@ public class CourseView extends FrameLayout {
     }
 
     /**
-     * 建立itemview
+     * Build an itemview
      */
     @SuppressLint("ClickableViewAccessibility")
     private View createItemView(final CourseAncestor course) {
@@ -368,7 +368,7 @@ public class CourseView extends FrameLayout {
         final List<CourseAncestor> courses = new ArrayList<>();
         courses.add(course);
 
-        /*查找在点击的item范围内重叠的item*/
+        /*Finds items that overlap within the range of items clicked*/
         for (CourseAncestor findCourse : mCourseList) {
             if (findCourse.getRow() == course.getRow()
                     && course != findCourse) {

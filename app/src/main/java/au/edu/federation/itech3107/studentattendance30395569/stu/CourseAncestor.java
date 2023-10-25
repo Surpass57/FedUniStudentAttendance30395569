@@ -6,51 +6,47 @@ import java.util.List;
 
 
 public class CourseAncestor implements Serializable {
-    //所有
+    //all
     public static final int SHOW_ALL = 0;
-    //双
+    //double
     public static final int SHOW_DOUBLE = 1;
-    //单
+    //single
     public static final int SHOW_SINGLE = 2;
     public int startIndex;
     public int endIndex;
     /**
-     * 单双显示
+     * double and single
      */
     public int showIndex = SHOW_ALL;
 
-    /*历史原因设置了上面的属性 已经废弃*/
 
-    /**
-     * 行号
-     */
     public int row;
     /**
-     * 所占行数
+     * The number of rows occupied
      */
     public int rowNum = 1;
     /**
-     * 列号
+     * column number
      */
     public int col;
 
     /**
-     * 颜色
+     * colour
      */
     public int color = -1;
     public int color2 = -1;
     /**
-     * 显示的内容
+     * Displayed content
      */
     public String text;
 
     /**
-     * 活跃状态
+     * active stste
      */
     public boolean activeStatus = true;
 
     /**
-     * 是否显示
+     *Show or not
      */
     public boolean displayable = true;
 

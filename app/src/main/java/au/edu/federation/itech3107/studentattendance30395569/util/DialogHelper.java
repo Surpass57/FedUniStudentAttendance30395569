@@ -31,11 +31,11 @@ import au.edu.federation.itech3107.studentattendance30395569.R;
 public class DialogHelper {
 
     private ProgressDialog progressDialog;
-    //方便在回调函数外拿到DialogHelper对象关闭mCustomDialog
+    // Easy to get the DialogHelper object outside the callback function to close mCustomDialog
     private AlertDialog mCustomDialog;
 
     /**
-     * 不确定不可关闭等待对话框<br>
+     * Indeterminate Can not close wait dialog <br>
      */
     public void showProgressDialog(Context context, String title, String msg, boolean canceable) {
         hideCustomDialog();
@@ -53,7 +53,7 @@ public class DialogHelper {
     }
 
     /**
-     * 一般对话框
+     * General dialog box
      */
     public void showNormalDialog(@NonNull Activity activity, @NonNull String title,
                                  @NonNull String massage, @NonNull final DialogListener listener) {
@@ -78,7 +78,7 @@ public class DialogHelper {
     }
 
     /**
-     * List对话框
+     * List dialog box
      */
     public void showListDialog(@NonNull Activity activity, String title,
                                @NonNull String[] items, @NonNull final DialogListener listener) {
@@ -98,7 +98,7 @@ public class DialogHelper {
 
 
     /**
-     * 自定义弹框
+     * Customize the pop-up
      */
     public void showCustomDialog(@NonNull Context context, View dialogView, String title,
                                  final DialogListener listener) {
@@ -111,13 +111,13 @@ public class DialogHelper {
         }
 
         if (listener != null) {
-            builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     listener.onPositive(dialog, which);
                 }
             })
-                    .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             listener.onNegative(dialog, which);
@@ -126,19 +126,19 @@ public class DialogHelper {
                     });
         }
 
-        //此处设置位置窗体大小
+        //Set the location form size
         mCustomDialog = builder.create();
 
         try {
             Field field = field = mCustomDialog.getClass().getDeclaredField("mAlert");
             field.setAccessible(true);
 
-            //   获得mAlert变量的值
+            //  Gets the value of mAlert variable
             Object obj = field.get(mCustomDialog);
             field = obj.getClass().getDeclaredField("mHandler");
             field.setAccessible(true);
 
-            //   修改mHandler变量的值，使用新的ButtonHandler类
+            //   Modify the value of the mHandler variable, using the new ButtonHandler class
             field.set(obj, new ButtonHandler(mCustomDialog));
         } catch (Exception e) {
             e.printStackTrace();
@@ -157,7 +157,7 @@ public class DialogHelper {
     }
 
     /**
-     * 底部弹窗
+     *Bottom popup
      */
     public Dialog buildBottomDialog(Activity activity, View layoutView) {
         Dialog bottomDialog = new Dialog(activity, R.style.BottomDialog);
@@ -172,7 +172,7 @@ public class DialogHelper {
     }
 
     /**
-     * 底部列表弹窗
+     *The bottom list popup
      */
     public Dialog buildBottomListDialog(Activity activity, String[] items, final DialogListener listener) {
         ListView listView = new ListView(activity.getApplicationContext());

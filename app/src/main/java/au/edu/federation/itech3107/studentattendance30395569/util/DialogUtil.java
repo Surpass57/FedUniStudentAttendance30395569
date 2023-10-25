@@ -14,39 +14,9 @@ import android.widget.Toast;
 import au.edu.federation.itech3107.studentattendance30395569.R;
 
 
-/**
- * ━━━━━━神兽出没━━━━━━
- * 　　　┏┓　　　┏┓
- * 　　┏┛┻━━━┛┻┓
- * 　　┃　　　　　　　┃
- * 　　┃　　　━　　　┃
- * 　　┃　┳┛　┗┳　┃
- * 　　┃　　　　　　　┃
- * 　　┃　　　┻　　　┃
- * 　　┃　　　　　　　┃
- * 　　┗━┓　　　┏━┛
- * 　　　　┃　　　┃  神兽保佑
- * 　　　　┃　　　┃  代码无bug
- * 　　　　┃　　　┗━━━┓
- * 　　　　┃　　　　　　　┣┓
- * 　　　　┃　　　　　　　┏┛
- * 　　　　┗┓┓┏━┳┓┏┛
- * 　　　　　┃┫┫　┃┫┫
- * 　　　　　┗┻┛　┗┻┛
- * ━━━━━━感觉萌萌哒━━━━━━
- *
- * @author
- * @date
- * @description
- */
 public class DialogUtil {
 
 
-    /**
-     *
-     * @param context
-     * @return
-     */
     public static Dialog showDialog(Context context, onClickConfirmListener listener) {
 
         View view = LayoutInflater.from(context).inflate(R.layout.dialog_upload, null);

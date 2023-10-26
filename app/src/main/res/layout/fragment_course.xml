@@ -7,16 +7,15 @@
     android:orientation="vertical"
     tools:context=".co.SYActivity">
 
-    <ImageView
+    <Button
         android:id="@+id/add"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"
-        android:src="@mipmap/ic_main_add"
         />
    <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/rv"

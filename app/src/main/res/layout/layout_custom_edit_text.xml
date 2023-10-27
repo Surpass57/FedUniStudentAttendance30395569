@@ -21,7 +21,7 @@
         android:singleLine="true"
         android:textColor="@color/primary_text"
         android:textSize="16sp"
-        tools:hint="学号"/>
+        tools:hint="student number"/>
 
     <ImageView
         android:id="@+id/iv_clear"

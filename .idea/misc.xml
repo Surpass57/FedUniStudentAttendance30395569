@@ -5,8 +5,37 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.18206521739130435" />
         <entry key="app/src/main/res/drawable/ic_access_time_black_24dp.xml" value="0.1827484130859375" />
-        <entry key="app/src/main/res/layout/activity_add.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/drawable/ic_add_black_24dp.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_add_location_black_24dp.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_done_black_24dp.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_location_on_black_24dp.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_person_black_24dp.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_svg_add.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ripple_add_location.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/shape_edit.xml" value="0.1735" />
+        <entry key="app/src/main/res/layout/activity_add.xml" value="0.29595015576323985" />
+        <entry key="app/src/main/res/layout/activity_add_student.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_check.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_course.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/activity_student.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/adapter_bottom_dialog_sytle.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/adapter_select_week.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/dialog_detail_course.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/dialog_select_week_and_node.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/dialog_upload.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_course.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/fragment_mine.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/item_check.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/item_check_course.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/item_course.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/layout_custom_edit_text.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/layout_location_item.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/title_toolbar.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1735" />
       </map>
     </option>
   </component>

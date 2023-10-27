@@ -23,11 +23,6 @@ import java.lang.reflect.Field;
 
 import au.edu.federation.itech3107.studentattendance30395569.R;
 
-/**
- * 对话框工具
- * Created by mnnyang on 17-4-14.
- */
-
 public class DialogHelper {
 
     private ProgressDialog progressDialog;

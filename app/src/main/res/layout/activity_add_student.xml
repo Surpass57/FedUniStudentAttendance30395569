@@ -5,18 +5,20 @@
     android:orientation="vertical">
 
     <FrameLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="47dp"
         android:background="@color/white">
 
         <TextView
-            android:layout_width="wrap_content"
+
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="16dp"
             android:text="@string/student_name_name"
             android:textColor="#ff333333"
-            android:textSize="13sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/et_name"
@@ -28,7 +30,7 @@
             android:gravity="right"
             android:hint=""
             android:textColor="#ff666666"
-            android:textSize="13sp" />
+            android:textSize="20sp" />
 
         <View
             android:layout_width="match_parent"
@@ -40,6 +42,7 @@
     </FrameLayout>
 
     <FrameLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="47dp"
         android:background="@color/white">
@@ -51,7 +54,7 @@
             android:layout_marginLeft="16dp"
             android:text="@string/student_number"
             android:textColor="#ff333333"
-            android:textSize="13sp" />
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/et_number"
@@ -80,20 +83,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="400dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
         android:background="#1499F3"
         android:text="@string/submit"
         android:textColor="@android:color/white"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        />
 
     <Button
         android:id="@+id/btn_delete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
         android:background="#1499F3"
         android:text="@string/delete"
         android:textColor="@android:color/white"
